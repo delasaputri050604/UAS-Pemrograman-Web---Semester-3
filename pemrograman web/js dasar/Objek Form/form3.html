@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Listener</title>
+</head>
+<body>
+    <div id="loading">Loading...</div>
+    <div id="konten" style="display: none;">
+        <input type="text" id="nama" placeholder="Nama Lengkap">
+        <button type="button" id="kirim">Simpan</button>
+    </div>
+    <script>
+        // inisiasi variabel
+    let nama = "";
+    // event listener saat halaman selesai dimuat window.addEventListener("load", selesaiLoading);
+        window.addEventListener("load",selesaiLoading);
+    // event listener saat teks input diisi
+    document.getElementById("nama").addEventListener("input", function() { 
+        nama= this.value;
+    })
+    // event listener saat tombol di klik
+    document.getElementById("kirim").addEventListener("click", function() { 
+        alert('Nama daffi berhasil disimpan');
+    });
+    // script yang dipanggil saat halaman selesai dimuat 
+    function selesaiLoading() {
+    setTimeout(function() {
+        document.getElementById("loading").style="display:none";
+        document.getElementById("konten").style="display:block";
+    }, 3000)
+    }
+</script>
+<a href="../../uass_dela/eksplorel.html">Back</a>
+</body>
+</html>

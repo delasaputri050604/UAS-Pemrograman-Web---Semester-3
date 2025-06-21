@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambil data dari Form</title>
+</head>
+<body>
+    <label for="lbl_nama">Masukkan Nilai Anda:</label>
+    <input type="number" id="nilai1" placeholder="Input Nilai Anda"><br><br>
+    <button id="proses">Proses</button> <br><br>
+    <p id="tampilan">Nilai Anda Adalah :</p>
+
+<script type="text/javascript">
+    // Menambahkan event listener untuk tombol Proses proses.addEventListener("click", function() {
+    proses.addEventListener("click",function() {
+    // Mengambil nilai dari objek textbox nilai1
+    var nilai = parseFloat(document.getElementById("nilai1").value);
+    // Menampilkan hasil di elemen hasil 
+    tampilan.innerText = "Nilai Anda adalah: " + nilai; 
+    });
+</script>
+<a href="../../uass_dela/eksplorel.html">Back</a>
+</body>
+</html>

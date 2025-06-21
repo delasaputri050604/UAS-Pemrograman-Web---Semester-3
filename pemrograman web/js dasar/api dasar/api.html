@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web form api</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="nama" maxlength="20" placeholder="Nama lengkap" required>
+    </div>
+    <div>
+        <input type="email" id="email" placeholder="Email" required>
+    </div>
+    <div>
+        <input type="number" id="usia" min="18" step="2" placeholder="Usia" required>
+    </div>
+    <div>
+        <button type="button" id="kirim">daftar</button>
+    </div>
+    <div id="pesan">hasil</div>
+    <script>
+        // eventlistener saat tombol di tekan
+        document.getElementById("kirim").addEventListener("clik",function(){
+            if (validasiInput("nama") && validasiInput("usia") && validasiInput("email")){
+        // tampilan pesan jika semua valid
+        document.getElementById("pesan").innerHTML = "Registrasi berhasil";
+            }
+        })
+        // membuat fungsi untuk melakukan validasi input 
+        function validasiInput(inputID) {
+            const input =document.getElementById(inputID);
+            const status=input.validity;
+ 
+        // set pesan eror
+            if(status.valueMissing){
+                input.setCustomValidity('Input ${inputID} tidak boleh kosong!');
+            // } else if (status.rangeUnderflow) {
+                // input.setCustomValidity('Input ${inputID} minimal 18 tahun.');
+            // } else if (status.typeMismatch) {
+                // input.setCustomValidity('Input${inputID} tidak valid.');
+            // } else if(status.stepMismatch) {
+                
+            // }
+                // input.setCustomValidity("");
+            // }
+            // }
+            input.reportvalidity(); 
+            return status.valid;
+        }
+    </script>
+    <a href="../../uass_dela/eksplorel.html">Back</a>
+</body>
+</html>

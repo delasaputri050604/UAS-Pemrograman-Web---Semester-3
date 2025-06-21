@@ -1,0 +1,15 @@
+copy baris aktif                   = Shift alt atas bawah
+-                                      
+Tampilkan dan sembunyikan side bar = cirl B
+-                                       
+hapus sebaris                      = CTRL SHIFT K
+-                                       
+Memanggil control pallet           = CTRL SHIFT P
+-                                        
+Merapikan coding                   = ctrl shift p  LALU JKETIK reindent lines
+-                                       
+mambawa baris kode ke posisi atas bawah = ALT ATAS BAWAH
+-
+MENGGANTI WARNAH LATAR             = CTRL K T
+-
+SELEKSI KATA SERUPA                = CTRL SHIFT L

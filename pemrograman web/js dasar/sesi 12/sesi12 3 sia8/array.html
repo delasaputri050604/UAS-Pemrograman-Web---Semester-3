@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>javascript For Loop</h2>
+    <p id="demo"></p>
+    <script>
+        const cars=["BMW","Volvo","Saab","Ford","Fiat","Audi"];
+        let text="";
+        for(let i=0;i<cars.length;i++){
+            text +=cars[i]+"<br>";
+        }
+        document.getElementById("demo").innerHTML=text;
+    </script>
+    <p>the reverse() method reverses the elements in an array:</p>
+    <p><u>HASIL</u></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+
+    <script>
+        //Create and display an array:
+        const fruits = ["Banana","Orange","Apple","Mango"];
+        //tampilan normal
+        document.getElementById("demo1").innerHTML= fruits;
+        //tampilan sortir ascending
+        fruits.sort();
+        document.getElementById("demo2").innerHTML= fruits;
+        //tampilan sortir descending
+        fruits.reverse();
+        document.getElementById("demo3").innerHTML= fruits;
+    </script>
+
+    <h2>java script for loop</h2>
+    <p id="demo"></p>
+    <script>
+        for (let i = 1; i < 51; i = i + 2)
+        document.write("<p></p>" + i)
+    </script>
+      <a href="../../../uass_dela/eksplorel.html">Back</a>
+  
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB FORM API</title>
+</head>
+<body>
+   <div>
+    <input type="text" id="nama" maxlength="20" placeholder="Nama Lengkap" required> 
+   </div> 
+   <div>
+    <input type="email" id="email" placeholder="email" required>
+   </div>
+   <div>
+    <input type="number" id="usia" min="18" step="2" placeholder="usia mu" required>
+   </div>
+   <div>
+    <button type="button" id="kirim">daftar</button>
+   </div>
+   <div id="pesan">hasil</div>
+   <script>
+    //eventlistener saat tombol ditekan
+    document.getElementById('kirim').addEventListener('click',function(){
+        if (validasiInput("nama") && validasiInput("usia") && validasiInput("email")){
+            //tampilkan pesan jika semua valid
+            document.getElementById("pesan").innerHTML="pendaftaran berhasil!";
+        }
+    })
+    //membuat fungsi validasiInput
+    function validasiInput(inputID){
+        const input =document.getElementById(inputID);
+        const status=input.validity;
+
+        if (status.valueMissing){
+            input.setCustomValidity("input ${inputID} tidak boleh kosong!");
+
+        }
+
+        input.reportValidity();
+        return status.valid;
+    }
+   </script>
+   <a href="../uass_dela/eksplorel.html">Back</a>
+</body>
+</html>
